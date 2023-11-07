@@ -195,7 +195,11 @@ class TicTacToe:
                     break
                 player = self.swap_player_turn(player)
             if not flag:
-                break
+                response = input("Wanna play again? Y/N").lower()
+                if response == 'n':
+                    break
+                else:
+                    self.create_board()
             print()
             self.show_board()
             choice = input("Wanna play again? Y/N").lower()
